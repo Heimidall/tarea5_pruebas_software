@@ -10,7 +10,7 @@ def obtener_data(photo, bucket,tol):
     palabras = []
     for text in data['TextDetections']:
         if(text['Type'] == "WORD" and text['Confidence'] >= tol):
-            palabras.append((text['DetectedText'])) 
+            palabras.append((text['DetectedText'].upper())) 
             logging.info("La palabra detectada es: {} con confidence {}".format(text['DetectedText'],text['Confidence']))
     logging.info("El set de palabras obtenidos es: {}".format(palabras))
     return palabras
@@ -30,11 +30,11 @@ def main():
         new_text = obtener_data(str(imagen),bucket_name, tolerancia)
         logging.info("Se compara el set de control {} con el de la imagen {}".format(text_control, new_text))
         if(set(text_control).issubset(set(new_text))):
-            print("True")
+            print("Imagen: {}  Resultado: True".format(imagen))
             logging.info("True")
             logging.info("La imagen de control esta contenida dentro de la imagen de test")
         else:
-            print("False")
+            print("Imagen: {}  Resultado: False".format(imagen))
             logging.info("False")
             logging.info("La imagen de control no esta contenida dentro de la imagen de test")
     return None

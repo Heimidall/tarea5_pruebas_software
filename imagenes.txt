@@ -1,3 +1,3 @@
 storagepsoftware
 imagen_control.png
-imagen_control.png,Its_monday_keep_smiling.jpg,maxresdefault.jpg,monday.jpg,surfer.jpg
+imagen_control.png,mas_de_50.png,menor_igual_50.png,confianza_menor_97.jpg,confianza_mayor_97.jpg,rotada_90.png,sin_caracter.png,repetidas.png,desordenadas.png,todas_minusculas.png,todas_mayusculas.png,mezcladas.png,sentencia.png
